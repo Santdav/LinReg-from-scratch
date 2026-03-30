@@ -7,9 +7,14 @@ class EquationLinearRegression:
 
     def __init__(self) -> None:
         self.theta: Optional[np.ndarray] = None
+        self.X = None
+        self.Y = None
 
     def fit(self, X: np.ndarray, y: np.ndarray) -> None:
         """Fits the model to the data using the Normal Equation."""
+
+        self.X = X
+        self.Y = y
         # Add bias term
         X_b = np.c_[np.ones((X.shape[0], 1)), X]
         # Normal Equation: (X^T * X)^-1 * X^T * y
