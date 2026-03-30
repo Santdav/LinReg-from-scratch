@@ -91,33 +91,13 @@ All four models are evaluated on the same train/test split:
 
 ### Installation
 ```bash
-git clone https://github.com/Santdav/linear-regression-comparison.git
-cd linear-regression-comparison
+git clone https://github.com/Santdav/LinReg-from-scratch
+cd LinReg-from-scratch
 pip install -r requirements.txt
 ```
 
-### Requirements
-```
-numpy
-pandas
-scikit-learn
-statsmodels
-matplotlib
-jupyter
-```
 
-### Running
 
-Open any notebook in `notebooks/` to run a specific method, or run all
-scripts from `src/` directly:
-```bash
-python src/gradient_descent.py
-python src/normal_equation.py
-python src/sklearn_model.py
-python src/statsmodels_model.py
-```
-
----
 
 ## Key Takeaways
 
