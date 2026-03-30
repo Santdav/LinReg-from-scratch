@@ -1,9 +1,9 @@
 import numpy as np
 from typing import Optional
 from src.metrics import mean_squared_error, r2_score
+from lin_reg_strategy import LinearRegressionStrategy
 
-
-class GradientDescentLinearRegression:
+class GradientDescentLinearRegression(LinearRegressionStrategy):
     """Linear Regression implementation using Gradient Descent."""
 
     def __init__(self, learning_rate: float = 0.01, n_iterations: int = 1000) -> None:
@@ -41,3 +41,14 @@ class GradientDescentLinearRegression:
             raise ValueError("Model not fitted yet.")
         X_b = np.c_[np.ones((X.shape[0], 1)), X]
         return X_b.dot(self.theta).flatten()
+
+    def mse(y_true: np.ndarray, y_pred: np.ndarray) -> float:
+        """Calculates the Mean Squared Error."""
+        return float(np.mean((y_true - y_pred) ** 2))
+
+    def r_squared(y_true: np.ndarray, y_pred: np.ndarray) -> float:
+        """Calculates the R^2 score."""
+        y_mean = np.mean(y_true)
+        ss_res = np.sum((y_true - y_pred) ** 2)
+        ss_tot = np.sum((y_true - y_mean) ** 2)
+        return float(1 - (ss_res / ss_tot))
