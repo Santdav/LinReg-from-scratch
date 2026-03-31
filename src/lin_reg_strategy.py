@@ -11,9 +11,13 @@ class LinearRegressionStrategy(ABC):
         pass
 
     @abstractmethod
-    def mse(y_true: np.ndarray, y_pred: np.ndarray) -> float:
+    def mse(self, y_true: np.ndarray, y_pred: np.ndarray) -> float:
         pass
 
     @abstractmethod
-    def r_squared(y_true: np.ndarray, y_pred: np.ndarray) -> float:
+    def r_squared(self, y_true: np.ndarray, y_pred: np.ndarray) -> float:
+        pass
+
+    @abstractmethod
+    def name(self) ->str:
         pass

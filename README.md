@@ -73,14 +73,13 @@ All four models are evaluated on the same train/test split:
 ## Results Summary
 
 > Results are filled in after running all notebooks.
-
-| Method | MSE | RMSE | MAE | R² |
-|---|---|---|---|---|
-| Gradient Descent | | | | |
-| Normal Equation | | | | |
-| scikit-learn | | | | |
-| statsmodels | | | | |
-
+---
+| Model | Train MSE | Test MSE | Train RMSE | Test RMSE | Train R² | Test R² |
+|---|---|---|---|---|---|---|
+| Stats Model | 28.864 | 29.921 | 5.3725 | 5.47 | 0.8496 | 0.7923 |
+| Equation Model | 28.864 | 29.921 | 5.3725 | 5.47 | 0.8496 | 0.7923 |
+| Gradient Descent Model | 28.864 | 29.921 | 5.3725 | 5.47 | 0.8496 | 0.7923 |
+| SKLearn Model | 28.864 | 29.921 | 5.3725 | 5.47 | 0.8496 | 0.7923 |
 ---
 
 ## Getting Started
